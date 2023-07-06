@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  background:#c0ebd7; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.loginBox {
+  width: 400px;
+  height: 364px;
+  background-color: #00a381;;
+  margin: 100px auto;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  color: aliceblue;
+  margin-bottom: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
+h3{
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  text-align:end;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.item {
+  height: 45px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.item input {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.item input:focus + label,
+.item input:valid + label {
+  top: 0px;
+  font-size: 2px;
+}
+
+.item label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  transition: all 0.5s linear;
+}
+
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 30px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  left: 35%;
+  border: 2px solid white;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  /* box-shadow: 0 0 1px rgba(0, 0, 0, 0); */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.btn:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AES加密</title>
+    <!-- 字体 -->
+    <script
+      type="text/javascript"
+      src="http://cdn.repository.webfont.com/wwwroot/js/wf/youziku.api.min.js"
+    ></script>
+    <script type="text/javascript">
+      $webfont.load(
+        "body",
+        "5ee13d834dc1406d85e0b705b8348f8a",
+        "jdzhonyuanjian"
+      );
+      /*$webfont.load("#id1,.class1,h1", "5ee13d834dc1406d85e0b705b8348f8a", "jdzhonyuanjian");*/
+      /*．．．*/
+      $webfont.draw();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="mouse.css" />
+    <script src="script.js"></script>
+    <script src="mouse.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  
+  </head>
+  <body>
+    <div class="circle-cursor1"></div>
+    <div class="circle-cursor2"></div>
+      <h1>AES加密</h1>
+    <div class="box">
+      <!-- 加密模块 -->
+      <h2>加密</h2>
+      
+ 
+
+<div class="r_d">
+        <input type="file" id="txtFile" accept=".txt">
+        <button class="btn_read" onclick="readTxtFile()">读取</button>
+        <button onclick="generateTxtFile()">生成并下载txt文件</button>
+    </div>
+    </div>
+      <div class="encrypt">
+        
+        <textarea
+          id="inputText"
+          class="text-box"
+          placeholder="输入要加密的信息"
+        ></textarea>
+        <div class="button-box">
+          <button class="button" id="button-1" onclick="encrypt()">
+            <img
+              width="100%"
+              height="100%"
+              src="https://img.icons8.com/officel/100/refresh.png"
+              alt="refresh"
+            />
+          </button>
+          
+        </div>
+        
+        <textarea
+          readonly
+          class="text-box"
+          id="outputText"
+          placeholder="加密结果"
+        ></textarea>
+      </div>
+
+      <!-- 解密模块 -->
+      <h2>解密</h2>
+      <div class="r_d">
+        <input type="file" id="txtFile1" accept=".txt">
+        <button class="btn_read" onclick="readTxtFile1()">读取</button>
+        <button onclick="generateTxtFile1()">生成并下载txt文件</button>
+    </div>
+      <div class="decrypt">
+        <textarea
+          id="encryptedText"
+          class="text-box"
+          placeholder="输入要解密的信息"
+        ></textarea>
+        <div class="button-box">
+          <button class="button" onclick="decrypt()">
+            <img
+              width="100%"
+              height="100%"
+              src="https://img.icons8.com/officel/100/refresh.png"
+              alt="refresh"
+            />
+          </button>
+        </div>
+        <textarea
+          readonly
+          class="text-box"
+          id="decryptedText"
+          placeholder="解密结果"
+        ></textarea>
+      </div>
+      <div>
+        <div id="hitokoto" style="text-align: center">
+        <p id="sentence" class="sentence" style="font-size: 15px"></p>
+        <p id="source" class="source"></p>
+      </div>
+    </div>
+  </body>
+</html>
